@@ -7,9 +7,13 @@
 # Ignore all cmake-build-debug folders
 **/cmake-build-debug/
 
-# Then unignore all .c and .h files
+# Then unignore all .c, .h, and .txt files
 !**/*.c
 !**/*.h
+!**/*.txt
+
+# Ignore CMakeLists.txt
+**/CMakeLists.txt
 
 # Ensure the .gitignore file is not ignored
 !.gitignore
