@@ -10,6 +10,10 @@
 # Then unignore all .c and .h files
 !**/*.c
 !**/*.h
+!**/*.txt
+
+# Ignore CMakeLists.txt
+**/CMakeLists.txt
 
 # Ensure the .gitignore file is not ignored
 !.gitignore
