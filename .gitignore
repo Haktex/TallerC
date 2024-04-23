@@ -4,8 +4,9 @@
 # But don't ignore directories, so we can recurse into them
 !*/
 
-# Ignore all cmake-build-debug folders
+# Ignore all cmake-build-debug folders & .idea
 **/cmake-build-debug/
+**/.idea
 
 # Then unignore all .c, .h, and .txt files
 !**/*.c
