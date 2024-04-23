@@ -8,10 +8,11 @@
 **/cmake-build-debug/
 **/.idea
 
-# Then unignore all .c, .h, and .txt files
+# Then unignore all .c, .h, .md and .txt files
 !**/*.c
 !**/*.h
 !**/*.txt
+!**/*.md
 
 # Ignore CMakeLists.txt
 **/CMakeLists.txt
