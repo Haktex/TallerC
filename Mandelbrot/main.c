@@ -19,7 +19,7 @@ double sqr(double num);
 int main(void) {
 
 
-
+    pritnf("hola");
     printf("P3\n%d %d\n255\n", image_width, image_height);
 
     for (int i = 0; i < image_width; i++) {
