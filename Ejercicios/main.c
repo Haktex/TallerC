@@ -2,6 +2,6 @@
 
 int main(void) {
 
-    printf("Hola Artek!");
+    printf("Hola 2!");
     return 0;
 }
