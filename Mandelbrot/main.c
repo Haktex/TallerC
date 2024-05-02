@@ -1,16 +1,12 @@
 #include <stdio.h>
-/*
- * 1. Utilicen un if  para alternar entre mandelbrot y julia con un bool GLOBAL
- * 2. Funcion que devueva el cuadrado de un parametro sqr(newR);
- * 3. Con Julia que el centro sea blanco y con mandel negro
- * 4. Que los valores constantes para el set de Julian sean variables globales y constantes
- * 5. Utilicen operador ternario para los ifs - puntos extra
-*/
 
-//Variables Globales Constantes
 const int image_width = 500, image_height = 500; //Dimensiones de imagen
+bool julia = true;
 
+const double julia_startR = 0;
+const double julia_startI = 0.8;
 double map(int pix, int minIn, int maxIn, double minOut, double maxOut);
+double sqr(double num);
 
 int main(void) {
 
@@ -19,27 +15,31 @@ int main(void) {
     for (int i = 0; i < image_width; i++) {
         for (int j = 0; j < image_height; j++) {
 
-            double startR = map(i, 0, image_width,-2, 2); // c
-            double startI = map(j, 0, image_height,-2, 2); // c
+            double startR = map(i, 0, image_width,-2, 2);
+            double startI = map(j, 0, image_height,-2, 2);
 
-            double newR = startR; //Real de Zn + 1 //Utilicen un if  para alternar entre mandelbrot y julia con un bool GLOBAL
-            double newI = startI; //Imaginario de Zn + 1 //Utilicen un if  para alternar entre mandelbrot y julia con un bool GLOBAL
+            double newR = julia ? startR : 0;
+            double newI = julia ? startI : 0;
 
             int n = 0;
             while(n < 100) {
-                double currR = newR * newR - newI * newI; //Real de Z^2 //funcion que devuelva el cuadrado de un parametro ej. sqr(newR);
-                double currI = 2 * newR * newI; //Imaginario  de Z^2
+                double currR = sqr(newR) - sqr(newI);
+                double currI = 2 * newR * newI;
 
-                newR = currR + 0; //nuevo Zn + 1 //Utilicen un if  para alternar entre mandelbrot y julia con un bool GLOBAL
-                newI = currI + 0.8; //nuevo Zn + 1 //Utilicen un if  para alternar entre mandelbrot y julia con un bool GLOBAL
+                newR = julia ? (currR + julia_startR) : (currR + startR);
+                newI = julia ? (currI + julia_startI) : (currI + startI);
 
-                if(newR * newR + newI * newI > 4) //funcion que devuelva el cuadrado de un parametro, ej. sqr(newR);
+                if(sqr(newR) + sqr(newI) > 4)
                     break;
 
                 n++;
             }
 
-            double bright = map(n, 0, 100, 0, 255); //Con Julia que el centro sea blanco y con mandel negro
+            double bright = map(n, 0, 100, 0, 255);
+
+            bright = julia ? bright : 255 - bright;
+
+
 
             printf("%d %d %d\n", (int)bright, (int)bright, (int)bright);
         }
@@ -50,4 +50,9 @@ int main(void) {
 
 double map(int pix, int minIn, int maxIn, double minOut, double maxOut) {
     return (double)(pix - minIn) / (maxIn - minIn) * (maxOut - minOut) + minOut;
+}
+
+//Funcion que devuelva el cuadrado de un parametro, ej. sqr(newR);
+double sqr(double num){
+    return num * num;
 }
