@@ -7,3 +7,7 @@ int main(void) {
     akSh_loop();
     return EXIT_SUCCESS;
 }
+
+void akSh_loop(void) {
+
+}
