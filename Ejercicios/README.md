@@ -94,7 +94,7 @@ El tamaño en bytes de cada elemento es 4.
 El tamaño en bytes del arreglo es 40.
 ```
 ---
-11. Pide al usuario ingresar calificaciones the manera continua, preguntando en cada instancia si quiere continuar o no. Almacena los resultados y calcula el promedio de su puntuaje al terminar el programa. 
+11. (En Clase) Pide al usuario ingresar calificaciones the manera continua, preguntando en cada instancia si quiere continuar o no. Almacena los resultados y calcula el promedio de su puntuaje al terminar el programa. 
     1. Inicializa tu arreglo con 10 y limita el numero de entradas a 2.
     2. Imprime el promedio de la califiacion con dos lugares decimales.
     3. Utiliza un `while`, un `for`, y `strcmp()`.
