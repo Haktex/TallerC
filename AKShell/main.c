@@ -11,6 +11,10 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
+int akSh_execute(char** args) {
+    return 0;
+}
+
 #define AKSH_TOK_BUFSIZE 64
 #define AKSH_TOK_DELIM " \t\r\n\a"
 char** akSh_split_line(char *line) {
