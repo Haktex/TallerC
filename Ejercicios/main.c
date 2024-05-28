@@ -1,7 +1,9 @@
-#include <stdio.h>
+#include "Ejercicios.h"
 
-int main(void) {
+int main(int argc, char* argv[]) {
 
-    printf("Hola Artek!");
+    ej12();
+
     return 0;
 }
+
