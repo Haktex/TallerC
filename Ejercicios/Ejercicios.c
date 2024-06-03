@@ -1,7 +1,66 @@
 #include "Ejercicios.h"
 
-int ej12() {
+void ej15() {
+    struct estructura ejemplo_est; //= {1, 'a', 3.14f};
+    ejemplo_est.x = 1;
+    ejemplo_est.a = 'a';
+    ejemplo_est.f = 3.14;
+    printf("Esto es un int: %d, esto es un char: %c, esto es un float: %f",ejemplo_est.x, ejemplo_est.a, ejemplo_est.f);
+}
 
+void ej14() {
+    int x = 10;
+    int* p = &x;
+
+    printf("El valor de x es: %d\n", x);
+    printf("El valor del apuntador a x es: %p\n", p);
+    printf("La direccion de memoria de x es: %p\n", &x);
+    printf("El valor en la direccion al que apunta el apuntador es: %d\n", *p);
+}
+
+void ej13() {
+
+    int player[4][5];
+    int w;
+
+    for(int i = 0; i < 4; i++) {
+        printf("Juego %d:\n",i + 1);
+        for (int j = 0; j < 5; j++) {
+            printf("Ingresa un puntuaje para el juegador %d ", j + 1);
+            scanf(" %d",&player[i][j]);
+        }
+    }
+
+    int curr = 0;
+    for(int i = 0; i < 5; i++) {
+        int sum = 0;
+        for (int j = 0; j < 4; j++) {
+            sum += player[j][i];
+            if(curr < sum) {
+                curr = sum;
+                w = i + 1;
+            }
+        }
+    }
+
+    printf("El jugador %d tuvo el mejor promedio con %.2f puntos por juego.\n", w, (float)curr / 4);
+}
+
+void ej12() {
+    int x,a = 0,s = 0;
+    time_t t;
+
+    printf("Ingresa el numero de veces a lanzar la moneda: ");
+    scanf("%d", &x);
+
+    srand((unsigned)time(&t));
+
+    for(int i = 0; i < x;i++)
+        rand() % 2 == 1 ? a++:s++;
+
+    printf("Despues de lanzar la moneda 5000 veces, los resultados fueron:\n");
+    printf("%d aguila\n", a);
+    printf("%d sol", s);
 }
 
 int ej11() {
@@ -46,6 +105,8 @@ int ej11() {
     printf("el promedio es %.2f.\n", sum / numScores);
 
     free(scores);
+
+    return 0;
 }
 
 void ej10() {
@@ -98,8 +159,8 @@ void ej7() {
     scanf("%f", &c);
 
     float solution1, solution2;
-    solution1 = (-b + sqrt((b*b)-(4*a*c)))/(2*a);
-    solution2 = (-b - sqrt((b*b)-(4*a*c)))/(2*a);
+    solution1 = (-b + sqrt((b*b)-(4*a*c))) / (2*a);
+    solution2 = (-b - sqrt((b*b)-(4*a*c))) / (2*a);
 
     if (((a*(solution1*solution1)) + (b*solution1) + c) == 0)
         printf("La solucion usando '+' es: %.2f\n", solution1);

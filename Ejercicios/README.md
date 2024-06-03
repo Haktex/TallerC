@@ -107,3 +107,56 @@ Ingresa una calificacion: 99
 Quieres continuar? Y/N N
 Tu promedio es: 88
 ```
+12. Pide al usuario ingresar un numero de veces a simular el lanzamiento de una moneda. Despues imprime los resultados de cada lado. 
+    1. Utiliza srand()
+```bash
+Cuantas veces desead lanzar la moneda: 5000
+Despues de lanzar la moneda 5000 veces, los resultados fueron:
+2463 aguila
+2537 sol
+
+```
+13. Pide al usuario ingresar un puntuaje para 5 jugadores sobre 4 juegos de bloncesto. El programa debe rastrear que jugador tuvo el mayor puntuaje promedio e imprimir los resultados
+    1. Utiliza un arreglo bi-dimensional y fors anidados. 
+```bash
+Juego # 1: 
+Ingresa una puntuaje para el jugador #1: 10
+Ingresa una puntuaje para el jugador #2: 11
+Ingresa una puntuaje para el jugador #3: 12
+Ingresa una puntuaje para el jugador #4: 13
+Ingresa una puntuaje para el jugador #5: 14
+Juego # 2: 
+Ingresa una puntuaje para el jugador #1: 10
+Ingresa una puntuaje para el jugador #2: 11
+Ingresa una puntuaje para el jugador #3: 12
+Ingresa una puntuaje para el jugador #4: 13
+Ingresa una puntuaje para el jugador #5: 15
+Juego # 3: 
+Ingresa una puntuaje para el jugador #1: 10
+Ingresa una puntuaje para el jugador #2: 11
+Ingresa una puntuaje para el jugador #3: 12
+Ingresa una puntuaje para el jugador #4: 13
+Ingresa una puntuaje para el jugador #5: 16
+Juego # 4: 
+Ingresa una puntuaje para el jugador #1: 10
+Ingresa una puntuaje para el jugador #2: 11
+Ingresa una puntuaje para el jugador #3: 12
+Ingresa una puntuaje para el jugador #4: 13
+Ingresa una puntuaje para el jugador #5: 17
+El jugador  #5 tuvo el mayor puntuaje promedio con 15.50 puntos por juego. 
+```
+14. Declara e inicializa una variable de tipo entero con cualquier valor. Asigna una variable de tipo apuntador a ese entero e imprime lo siguiente:
+    1. El valor de x
+    2. El valor del apuntador a x
+    3. El valor de la direccion de memoria de x
+    4. El valor en la direccion a la que apunta el apuntador
+```bash
+El valor de x es: 10
+El valor del apuntador a x es: 0x7ffcb8982084
+La direccion de memoria de x es: 0x7ffcb8982084
+El valor en la direccion al que apunta el apuntador es: 10
+```
+15. Define una estructura fuera de 'main()' que contenga miembros de tipo entero, caracter, y flotante. Dentro de 'main()', declara valores para los miembros de la estructura e imprimelos. 
+```bash
+Esto es un int: 1, esto es un char: a, esto es un float: 3.14
+```

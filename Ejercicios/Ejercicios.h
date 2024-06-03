@@ -22,7 +22,20 @@ void ej10();
 #include <string.h>
 #define INITIAL_CAPACITY 3
 int ej11();
-int ej12();
+#include <time.h>
+void ej12();
+void ej13();
+void ej14();
+
+struct estructura {
+    int x;
+    char a;
+    float f;
+};
+
+extern struct estructura ejemplo_est;
+
+void ej15();
 
 
 
