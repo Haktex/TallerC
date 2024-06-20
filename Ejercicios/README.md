@@ -156,7 +156,37 @@ El valor del apuntador a x es: 0x7ffcb8982084
 La direccion de memoria de x es: 0x7ffcb8982084
 El valor en la direccion al que apunta el apuntador es: 10
 ```
-15. Define una estructura fuera de 'main()' que contenga miembros de tipo entero, caracter, y flotante. Dentro de 'main()', declara valores para los miembros de la estructura e imprimelos. 
+15. Crea una estructura que contenga lo siguiente:
+    - Primer Nombre
+    - Apellido
+    - ID de Empleado
+
+Crea otra estructura que tenga dos miembro cuyo tipo es la estructura anterior.
+
+En main, pide al usuario ingresar los valores para cada empleado e imprimelos en la terminal
 ```bash
-Esto es un int: 1, esto es un char: a, esto es un float: 3.14
+Ingresa el nombre del empleadx: Bruce
+Ingresa el apellido: Wayne
+Ingresa el ID number: 42
+
+Ingresa el nombre del empleadx: Clark
+Ingresa el apellido: Kent
+Ingresa el ID number: 420
+
+Informacion de empleado para Bruce Wayne: 
+ID: 42
+
+Informacion de empleado para Clark Kent: 
+ID: 420
 ```
+16.  Imprimir dos columnas; la primera con valores de Farenheit y la segunda Celsius.
+     1. Utiliza un while para hacer la conversion de Farenheit a Celsius
+     2. Cada iteracion, aumenta el valor de Farenheit por 20, comienza de 0 hasta 300
+     3. Utiliza un nombre simbolico/constante (#define) para manejar los valores iniciales, finales, y de escalamiento.
+     4. Realiza la misma operacion pero ahora en dos lineas y con un for. 
+     5. Para imprimir los valores en el while, utiliza '/t' para separar entre las columnas
+     6. Para imprimir los valores en el for, utiliza '%x.yf' para separar y delimitar las columnas, donde 'x' y 'y' son enteros
+17. Hacer un contador de caracteres, y luego de nuevas lineas.
+    1. Modificar el contador de nuevas lineas para tambien considerar tabs y espacios.
+    2. Copiar el input al output, reemplazando los valores de espacio por uno.
+    3. Copiar el input al output, remeplazando los valores de tab y slash por \t y\\.

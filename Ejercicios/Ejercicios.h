@@ -22,21 +22,29 @@ void ej10();
 #include <string.h>
 #define INITIAL_CAPACITY 3
 int ej11();
+
 #include <time.h>
 void ej12();
 void ej13();
 void ej14();
 
-struct estructura {
-    int x;
-    char a;
-    float f;
+struct empData {
+    char name[20];
+    char last[20];
+    int id;
 };
-
-extern struct estructura ejemplo_est;
+struct empProf {
+    struct empData emp1;
+    struct empData emp2;
+};
+extern struct empProf empleados;
 
 void ej15();
 
-
+#define LOWER 0
+#define UPPER 300
+#define STEP 20
+void ej16();
+void ej17();
 
 #endif //EJERCICIOS_EJERCICIOS_H

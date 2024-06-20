@@ -1,11 +1,91 @@
 #include "Ejercicios.h"
 
+void ej17() {
+    /*
+    int nc;
+    for(nc = 0; getchar() != EOF; ++nc);
+    printf("%d\n",nc);
+    printf("%d", EOF);
+     */
+
+    int c, nl = 0, nt = 0, ns = 0, i = 0;
+
+
+    while((c = getchar()) != EOF) {
+        switch(c) {
+            case '\b':
+                putchar('\\');
+                putchar('b');
+                break;
+            case '\\':
+                putchar('\\');
+                putchar('\\');
+                break;
+            case '\t':
+                putchar('\\');
+                putchar('t');
+                ++nt;
+                break;
+            case '\n':
+                putchar('\\');
+                putchar('n');
+                ++nl;
+                break;
+            case ' ':
+                putchar('1');
+                ++ns;
+                break;
+            default:
+                putchar(c);
+                break;
+        }
+    }
+    printf("\n%d %d %d\n", nl, nt, ns);
+}
+
+void ej16() {
+        int fahr;
+        /*
+        float celsius;
+
+        fahr = LOWER;
+
+        while(fahr <= UPPER) {
+            celsius = (5.0/9.0) * (fahr - 32);
+            printf("%3d%10.3f\n",fahr,celsius);
+            fahr += STEP;
+        }
+         */
+        for(fahr = LOWER; fahr <= UPPER; fahr += STEP)
+            printf("%3d%10.3f\n",fahr,(5.0/9.0) * (fahr-32));
+}
+
 void ej15() {
-    struct estructura ejemplo_est; //= {1, 'a', 3.14f};
-    ejemplo_est.x = 1;
-    ejemplo_est.a = 'a';
-    ejemplo_est.f = 3.14;
-    printf("Esto es un int: %d, esto es un char: %c, esto es un float: %f",ejemplo_est.x, ejemplo_est.a, ejemplo_est.f);
+    struct empProf empleados;
+
+    for(int i = 0; i < 2; i++) {
+        struct empData* empleado = &empleados.emp1;
+        if (i > 0)
+            empleado = &empleados.emp2;
+
+        printf("Ingresa el nombre del empleado %d: ", i + 1);
+        scanf("%s",empleado->name);
+
+        printf("Ingresa el apellido del empleado %d: ", i + 1);
+        scanf("%s",empleado->last);
+
+        printf("Ingresa el ID del empleado %d: ", i + 1);
+        scanf("%d",&empleado->id);
+    }
+
+    for(int i = 0; i < 2; i++) {
+        struct empData* empleado = &empleados.emp1;
+        if (i > 0)
+            empleado = &empleados.emp2;
+
+        printf("Informacion de empleado para %s %s\n", empleado->name, empleado->last);
+        printf("ID: %d\n", empleado->id);
+    }
 }
 
 void ej14() {
